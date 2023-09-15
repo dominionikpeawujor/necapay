@@ -1,0 +1,58 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Virtual environments
+.venv/
+env/
+*.egg-info/
+
+# Database files (SQLite)
+*.sqlite3
+
+# Local settings (settings.py with sensitive information)
+local_settings.py
+
+# Secret key (if it's hardcoded in your settings)
+SECRET_KEY
+
+# Media files (user-uploaded content)
+media/
+
+# Static files (collected static assets)
+static/
+
+# IDE and text editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.user
+*.suo
+*.cache
+*.bak
+*.sublime-workspace
+
+# Environment variables file (if you're using a .env file)
+.env
+
+# Log files
+*.log
+
+# Compiled files
+*.pyc
+
+# macOS-specific files
+.DS_Store
+
+# Compiled Python files
+__pycache__/
+
+# Compiled Python files from tests
+test_*.pyc
