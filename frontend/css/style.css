@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: blue;
+    --secondary-color: purple;
+    --subtitle: grey;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 0em 6em;
+    padding: 0.75em;
+}
+
+.section {
+    margin: .75em 0;
+}
+
+.link {
+    color: var(--primary-color);
+    /* text-decoration: underline; */
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: 1em;
+    padding-top: .8em;
+}
+
+li, a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+.logo > a {
+    text-transform: lowercase;
+    color: var(--secondary-color);
+    gap: 10px;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.logo > a > span {
+    color: var(--primary-color);
+    /* font-weight: 400; */
+}
+
+.primary-button {
+    background:var(--primary-color) ;
+    color: white;
+    padding: 0.9em 3em;
+    border-radius: 6px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.primary-button::after {
+    content: ">";
+    padding-left: 1em;
+}
+
+.secondary-button {
+    border: 1.5px solid var(--secondary-color);
+    padding: 0.7em;
+    border-radius: 6px;
+    color: var(--secondary-color);
+}
+
+.secondary-button:hover {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3em 0;
+    
+}
+
+.hero-buttons {
+    margin: 2.5em 0;
+}
+
+.header-main-text {
+    font-size: 3.5em;
+    font-weight: 600;
+    padding-top: 1em;
+}
+
+.header-subtitle {
+    color: var(--subtitle);
+}
+
+.right > img {
+    height: 500px;
+    width: 500px;
+    position: relative;
+
+}
+
+.sign {
+    display: grid;
+     /* grid-template-columns: auto auto;  */
+}
+
+.back-to-home::before {
+    content: '<';
+}
+
+
+.login {
+    position: relative;
+    top: 50%;
+    transform: translate(0, 20%);
+}
+
+.form {
+    margin: 1em auto;
+    line-height: 2.9em;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+}
+
+input {
+    border: .6px solid rgb(197, 196, 196);
+    padding: 1em ;
+    border-radius: 6px;
+}
+/* ========= SIGN UP ======= */
+
+.form-header {
+    line-height: 2em;
+    text-align: center;
+}
+
+.form-header-text {
+    font-size: 2.1em;
+    font-weight: 600;
+}
+
+.form-header-subtext {
+    color: var(--subtitle);
+    font-size: .9em;   
+}
+
+.button {
+    margin: 1.4em 0;
+}
+
+/* ===== DASHBOARD ===== */
