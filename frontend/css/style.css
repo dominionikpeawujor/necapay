@@ -4,6 +4,7 @@
     --primary-color: blue;
     --secondary-color: purple;
     --subtitle: grey;
+    --primary-text-color: rgb(56, 56, 56);
 }
 
 * {
@@ -16,8 +17,11 @@
 }
 
 .container {
-    margin: 0em 6em;
-    padding: 0.75em;
+    margin: 0em auto;
+    padding: 1.75em 6em;
+    max-width: 2080px;
+    
+    
 }
 
 .section {
@@ -165,3 +169,126 @@ input {
 }
 
 /* ===== DASHBOARD ===== */
+.dashboard_container {
+    margin: auto;
+    max-width: 100wh;
+    padding: 0 2em;
+    /* background-color: grey; */
+    backdrop-filter: blur(30%);
+    height: 100vh;
+    /* color: white; */
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+.profile{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    border-radius: 50%;
+    margin: 20px;
+}
+.menu {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    /* background-color: #c14ec5; */
+    /* color: white; */
+    /* border-right: .5px solid grey; */
+    align-items: center;
+    
+    /* top: 40%; */
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    color: var(--primary-text-color)
+
+}
+
+.menu-item:hover {
+    color: blue;
+    
+}
+
+.menu-item > i {
+    /* color: purple; */
+    font-size: .8em;
+}
+
+.logout {
+    margin: 60px 0;
+    
+}
+
+.main {
+    /* background-color: rgba(255, 0, 0, 0.432); */
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.452);
+    padding: 1.5em;
+    margin: 2em;
+}
+
+
+.main_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.main_card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.greeting {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    margin: 1em 0;
+}
+
+.current-balance {
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 20px;
+    padding: 3em 1em;
+}
+
+.current-balance > h1 {
+    font-size: 1.2em;
+    color: var(--primary-text-color);
+    font-weight: 600;
+}
+
+.amount {
+    font-size: 2.5em;
+    color: var(--primary-text-color);
+}
+
+.main_card-right {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card-button {
+    padding: 3em;
+    background-color: var(--primary-color);
+    align-self: center;
+    color: white;
+    border-radius: 8px;
+}

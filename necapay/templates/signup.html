@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="sign">
+            <div class="form">
+                <div class="form-header">
+                    <a class="link" href="/index.html"> < Back to home</a>
+                    <div class="form-header-text">Create your account</div>
+                    <div class="form-header-subtext">Enter accurate credentials to create your account</div>
+                </div>
+                <form action="/index.html" method="get">
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            placeholder="name@company.com"
+                            name="email"
+                            required
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label for="fname">First name</label>
+                        <input
+                            type="text"
+                            placeholder="John"
+                            name="fname"
+                            required
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label for="lname">Last name</label>
+                        <input
+                            type="text"
+                            placeholder="Doe"
+                            name="lname"
+                            required
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input
+                            type="text"
+                            placeholder="Password"
+                            name="password"
+                            required
+                        />
+                    </div>
+
+                    <div class="input">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input
+                            type="text"
+                            placeholder="Confirm Password"
+                            name="confirmPassword"
+                            required
+                        />
+                    </div>
+
+                    <div class="input button">
+                        <button type="submit" class="primary-button">Register</button>
+                    </div>
+                </form>
+                <div class="not-a-member">
+                    <p>Already a member? <a class='link' href="/signin.html">Sign in now</a></p>
+                </div>
+            </div>
+           
+        </div>
+    </body>
+</html>
