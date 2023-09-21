@@ -1,36 +1,63 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="form">
-        <form action="" method="post">
-            <div class="input">
-                <label for="commodity">Commodity</label>
-                <input
-                    type="text"
-                    placeholder="commodity"
-                    name="commodity"
-                />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <script
+            src="https://kit.fontawesome.com/a619fa532e.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Dashboard | Pay</title>
+    </head>
+    <body>
+        <div class="dashboard_container">
+            <nav>
+                <div class="logo">
+                    <a href="/"><span>NECA</span>PAY</a>
+                </div>
+            </nav>
+            <div class="dashboard">
+                <div class="menu">
+                    <div class="profile"></div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <a href="/dashboard"><i class="fa-solid fa-house"></i> Home</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="/generate"><i class="fa-solid fa-credit-card"></i> Generate</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="/verify"><i class="fa-solid fa-money-bill-1-wave"></i> Verify</a>
+                        </div>
+                        <div class="menu-item logout">
+                            <a href="/accounts/signout" class="menu-item logout"><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="form">
+                        <div class="greeting">Verify Token</div>
+                        <form action="" method="post">
+                            {% csrf_token %}                    
+                            <div class="input">
+                                <label for="token">Token</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter a token"
+                                    name="token"
+                                />
+                            </div>
+                    
+                            <div class="input button">
+                                <button type="submit" class="primary-button">Verify</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-    
-            <div class="input">
-                <label for="token">Token</label>
-                <input
-                    type="text"
-                    placeholder="Enter a token"
-                    name="token"
-                />
-            </div>
-    
-            <div class="input button">
-                <button type="submit" class="primary-button">Verify</button>
-            </div>
-        </form>
-    </div>
-</body>
+        </div>
+    </body>
 </html>

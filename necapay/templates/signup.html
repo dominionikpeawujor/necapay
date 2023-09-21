@@ -1,20 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Document</title>
+        <title>{% block title %}{% endblock %} Welcome</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     </head>
     <body>
         <div class="sign">
             <div class="form">
                 <div class="form-header">
-                    <a class="link" href="/index.html"> < Back to home</a>
+                    <a class="link" href="/"> < Back to home</a>
                     <div class="form-header-text">Create your account</div>
                     <div class="form-header-subtext">Enter accurate credentials to create your account</div>
                 </div>
-                <form action="/index.html" method="get">
+                <form action="/accounts/signup" method="post">
+                    {% csrf_token %}
                     <div class="input">
                         <label for="email">Email</label>
                         <input
@@ -70,7 +72,7 @@
                     </div>
                 </form>
                 <div class="not-a-member">
-                    <p>Already a member? <a class='link' href="/signin.html">Sign in now</a></p>
+                    <p>Already a member? <a class='link' href="/accounts/login">Sign in now</a></p>
                 </div>
             </div>
            

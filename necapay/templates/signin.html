@@ -1,20 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Document</title>
+        <title>{% block title %}{% endblock %} Welcome</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     </head>
     <body>
         <div class="sign login">
+            {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
             <div class="form">
                 <div class="form-header">
-                    <a class="link" href="/index.html"> < Back to home</a>
+                    <a class="link" href="/"> < Back to home</a>
                     <div class="form-header-text">Log in to your account</div>
                     <div class="form-header-subtext">Enter your credentials to access your account</div>
                 </div>
-                <form action="" method="post">
+                <form action="/accounts/login/" method="post">
+                    {% csrf_token %}
                     <div class="input">
                         <label for="email">Email</label>
                         <input
@@ -38,7 +48,7 @@
                     </div>
                 </form>
                 <div class="not-a-member">
-                    <p>Not a member? <a class="link" href="/signup.html">Sign up now</a></p>
+                    <p>Not a member? <a class="link" href="/accounts/signup">Sign up now</a></p>
                 </div>
             </div>
         </div>
