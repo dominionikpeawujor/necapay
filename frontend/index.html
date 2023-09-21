@@ -1,11 +1,12 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- {% block head %} -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{% block title %}Welcome{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <title>{% block title %}{% endblock %} Welcome</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- {% endblock%} -->
     </head>
     <body>
         <div class="container home">
@@ -13,14 +14,14 @@
             <div class="home">
                 <nav>
                     <div class="logo">
-                        <a href="/"><span>NECA</span>PAY</a>
+                        <a href="/index.html"><span>NECA</span>PAY</a>
                     </div>
                     <!-- <div class="menus">
                     <ul>
                         <li><a href="">Home</a></li>
                     </ul>
                 </div> -->
-                    <a href="/dashboard" class="secondary-button"
+                    <a href="/dashboard.html" class="secondary-button"
                         >Go to Dashboard</a
                     >
                 </nav>
@@ -37,12 +38,12 @@
                             for.
                         </div>
                         <div class="hero-buttons">
-                            <a class="primary-button" href="/accounts/signup"
+                            <a class="primary-button" href="/signin.html"
                                 >Get Started</a
                             >
                         </div>
                     </div>
-                    <div class="right"><img src="{% static 'img/pay.svg' %}" alt="" /></div>
+                    <div class="right"><img src="img/pay.svg" alt="" /></div>
                 </header>
                 <section class="about container">
                     <div class="about-infos">

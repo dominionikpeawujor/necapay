@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <script
+            src="https://kit.fontawesome.com/a619fa532e.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div class="dashboard_container">
+            <nav>
+                <div class="logo">
+                    <a href="/"><span>NECA</span>PAY</a>
+                </div>
+            </nav>
+            <div class="dashboard">
+                <div class="menu">
+                    <div class="profile"></div>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <a href="/dashboard"
+                                ><i class="fa-solid fa-house"></i> Home</a
+                            >
+                        </div>
+                        <div class="menu-item">
+                            <a href="/generate"
+                                ><i class="fa-solid fa-credit-card"></i>
+                                Generate</a
+                            >
+                        </div>
+                        <div class="menu-item">
+                            <a href="/verify"
+                                ><i class="fa-solid fa-money-bill-1-wave"></i>
+                                Verify</a
+                            >
+                        </div>
+                        <div class="menu-item">
+                            <a href="/dashboard"
+                                ><i class="fa-solid fa-wallet"></i>
+                                Tokens</a
+                            >
+                        </div>
+                        <div class="menu-item logout">
+                            <a href="/accounts/signout" class="menu-item logout"
+                                ><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main_card">
+                        <div class="main_card-left">
+                            <div class="greeting">
+                                Hello, {{user.first_name}} 😊
+                            </div>
+                            <div class="current-balance">
+                                <h1>Current Balance</h1>
+                                <div class="amount">${{user.amount}}</div>
+                            </div>
+                        </div>
+                        <div class="main_card-right">
+                            <a href="/generate" class="card-button"
+                                >Generate payment token</a
+                            >
+                            <a href="/verify" class="card-button"
+                                >Verify payment token</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
