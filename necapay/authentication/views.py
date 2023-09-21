@@ -21,7 +21,7 @@ def signup(request):
         # Check if the user with the given email already exists
         if CustomUser.objects.filter(username=email).exists():
             messages.error(request, 'Account with this email already exists.')
-            return redirect('signup')
+            return redirect('/accounts/signup')
 
         # Create a new user
         new_user = CustomUser.objects.create_user(username=email, password=password)
@@ -33,7 +33,7 @@ def signup(request):
 
         messages.success(request, 'Account created successfully.')
 
-        return redirect('login')
+        return redirect('/accounts/login/')
     else:
         return render(request, 'signup.html')
 

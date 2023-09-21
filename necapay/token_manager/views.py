@@ -30,12 +30,11 @@ def generate(request):
         if account_balance < amount :
             messages.error(request, 'Insufficient balance')
             return render(request, 'generate.html')
-
-        print(type(user), 'it is well')
         
         data = {
             'commodity' : commodity,
             'amount' : amount,
+            
         }
 
         result = generator.generate(data)
@@ -57,7 +56,10 @@ def verify(request):
         if result:
             request.user.amount = float(request.user.amount) + result
             request.user.save()
-            return HttpResponse(f'Transaction successful! {result} was credited into the account!')
+            # return HttpResponse(f'Transaction successful! {result} was credited into the account!')
+            return render(request, 'confirmation.html', {'amount': result})
+
+        
         else:
             
             return HttpResponse(f'Transaction unsuccessful! Try again')
